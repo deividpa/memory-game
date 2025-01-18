@@ -13,7 +13,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --background-color: #282c34;
+  --background-color: rgba(0, 0, 0, 0.3);
   --modern-purple: #9b59b6;
   --light-purple: #b085d6;
 }
@@ -49,6 +49,7 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
+  border-color: var(--light-purple);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
