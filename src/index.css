@@ -61,11 +61,18 @@ button {
 }
 
 button:hover {
-  background-color: var(--light-purple);
-  border-color: var(--modern-purple);
+  background-color: var(--modern-purple);
+  border-color: var(--light-purple);
 }
 
 button:focus,
 button:focus-visible {
   outline: 4px auto var(--modern-purple);
+}
+
+.card-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
 }
