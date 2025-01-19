@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import cover from './assets/cover.png';
+import cover from './assets/cover1.png';
 import sword from './assets/sword-1.png';
 import shield from './assets/shield-1.png';
 import scroll from './assets/scroll-1.png';
@@ -36,13 +36,16 @@ function App() {
 
   // Handle a Choice
   const handleChoice = (card) => {
+    // Prevent selecting more than 2 cards
     if(choiceOne && choiceTwo) {
       return;
     }
+
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   }
 
   useEffect(() => {
+
     if (choiceOne && choiceTwo) {
       if(choiceOne.alt === choiceTwo.alt) {
         if(choiceOne.id === choiceTwo.id) {
@@ -64,14 +67,16 @@ function App() {
     }
   }, [choiceOne, choiceTwo])
 
-  console.log(cards);
-
   // Reset choices and increment turns
   const resetTurn = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
     setTurns(prevTurns => prevTurns + 1);
   }
+
+  useEffect(() => {
+    shuffleCards();
+  }, [])
 
   return (
     <>
