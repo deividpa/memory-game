@@ -5,7 +5,6 @@ const Card = ({ card, cover, handleChoice, flipped }) => {
   const { src, alt } = card;
 
   const handleClick = () => {
-    console.log(alt, " flipped: ", flipped);
     handleChoice(card);
   }
 
