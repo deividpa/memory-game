@@ -36,29 +36,29 @@ body {
 }
 
 main {
-  max-width: 670px;
-  margin: 15px auto;
+  max-width: 580px;
+  margin: 5px auto;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   main {
     max-width: 90%;
-    margin: 10px auto;
+    margin: 5px auto;
   }
 }
 
 @media (max-width: 480px) {
   main {
     max-width: 95%;
-    margin: 10px auto;
+    margin: 5px auto;
   }
 }
 
 
 h1 {
   font-size: 2.0em;
-  line-height: 1.1;
+  line-height: 0.5;
 }
 
 button {
@@ -86,7 +86,7 @@ button:focus-visible {
 }
 
 .card-grid {
-  margin-top: 20px;
+  margin-top: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
@@ -124,4 +124,37 @@ button:focus-visible {
 .flipped .back {
   transform: rotateY(90deg);
   transition-delay: 0s;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.stats p {
+  background-color: var(--background-color);
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stats p {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
+
+.timer {
+  display: flex;
+  align-items: center;
 }
