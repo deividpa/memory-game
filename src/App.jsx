@@ -7,6 +7,7 @@ import scroll from './assets/scroll-1.png';
 import potion from './assets/potion-1.png';
 import helmet from './assets/helmet-1.png';
 import ring from './assets/ring-1.png';
+import Card from "./components/Card";
 
 const cardImages = [
   { "src": sword, "alt": "Sword" },
@@ -41,12 +42,7 @@ function App() {
 
         <div className="card-grid">
           {cards.map((card) => (
-            <div key={card.id} className="card">
-              <div>
-                <img className="front" src={card.src} alt={card.alt} />
-                <img className="back" src={cover} alt="Card Back" />
-              </div>
-            </div>
+            <Card key={card.id} src={card.src} alt={card.alt} cover={cover} />
           ))}
         </div>
       </main>
